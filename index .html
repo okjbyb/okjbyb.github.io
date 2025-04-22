@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>王笑言的博客</title>
     <style>
-        /* 保留原有样式 - 不需要修改 */
-        /* 全局样式 */
+        /* 保留所有原有样式 */
         * {
             box-sizing: border-box;
             margin: 0;
@@ -160,6 +159,20 @@
             color: #4a2c10;
             margin-bottom: 15px;
         }
+        
+        /* 评论区占位符样式 */
+        .disqus-placeholder {
+            cursor: pointer;
+            padding: 10px;
+            background-color: #f1ebe0;
+            border-radius: 5px;
+            text-align: center;
+            transition: background-color 0.3s ease;
+        }
+        
+        .disqus-placeholder:hover {
+            background-color: #e5dbc9;
+        }
     </style>
 </head>
 <body>
@@ -249,45 +262,37 @@
 
     <script>
         /**
-         * 这是简化后的 Disqus 代码，专门解决 GitHub Pages 上的问题
+         * Disqus 评论系统集成
+         * 修复了 URL 配置问题
          */
+        var disqus_shortname = 'wxyok';
         var disqus_config = function () {
-            // 使用您的网站域名，如果是 GitHub Pages，使用 GitHub Pages URL
-            this.page.url = "https://{{okjbyb}}.github.io/{{okjbyb.github.io}}";
-            // 为每个页面使用唯一标识符
-            this.page.identifier = "wxyok-blog";
+            // 使用绝对 URL，不含占位符
+            this.page.url = 'https://okjbyb.github.io/';
+            this.page.identifier = 'wangxiaoyan-blog';
         };
         
         (function() {
-            // 第一个文章评论区默认加载
+            // 加载 Disqus
             var d = document, s = d.createElement('script');
-            s.src = 'https://wxyok.disqus.com/embed.js';
+            s.src = 'https://' + disqus_shortname + '.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
             
-            // 添加点击事件，让其他评论区可以点击显示
-            var placeholders = document.querySelectorAll('.disqus-placeholder');
-            placeholders.forEach(function(placeholder) {
-                placeholder.style.cursor = 'pointer';
-                placeholder.style.padding = '10px';
-                placeholder.style.backgroundColor = '#f1ebe0';
-                placeholder.style.borderRadius = '5px';
-                placeholder.style.textAlign = 'center';
-                
+            // 点击加载其他评论区
+            document.querySelectorAll('.disqus-placeholder').forEach(function(placeholder) {
                 placeholder.addEventListener('click', function() {
-                    // 替换点击的元素为 Disqus 评论框
-                    var parent = placeholder.parentElement;
-                    var disqusThread = document.createElement('div');
-                    disqusThread.id = 'disqus_thread';
-                    parent.replaceChild(disqusThread, placeholder);
+                    var commentSection = this.parentNode;
+                    var threadDiv = document.createElement('div');
+                    threadDiv.id = 'disqus_thread';
+                    commentSection.replaceChild(threadDiv, this);
                     
-                    // 如果 Disqus 已经加载，重置它
                     if (window.DISQUS) {
                         DISQUS.reset({
                             reload: true,
                             config: function () {
-                                this.page.identifier = "wxyok-blog";
-                                this.page.url = "https://{{您的GitHub用户名}}.github.io/{{仓库名}}";
+                                this.page.url = 'https://okjbyb.github.io/';
+                                this.page.identifier = 'wangxiaoyan-blog';
                             }
                         });
                     }
