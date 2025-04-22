@@ -1,59 +1,25 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-<!-- 头部内容保持不变 -->
+<html>
 <head>
-    <!-- 原有内容 -->
+    <title>Giscus测试</title>
 </head>
 <body>
-    <div class="container">
-        <!-- 其他内容保持不变 -->
-        
-        <div class="post">
-            <h2 class="post-title">傻逼南基一又输球了</h2>
-            <span class="post-meta">发布于2025.4.2 | </span>
-            <div class="post-content">
-                <p>别嚯嚯河南队了，麻蛋这两年年年开局没舒坦过</p>
-                <p>男鸡一赶紧下课</p>
-                <p>而且大伙怎么全谈恋爱去了，怎么没有学妹来主动找我呢？</p>
-                
-                <!-- 新的Giscus评论实现 -->
-                <div class="comments-container" style="margin-top: 30px; padding-top: 20px; border-top: 1px solid #e0d6c4;">
-                    <h3 style="margin-bottom: 15px;">评论</h3>
-                    <div id="giscus-container"></div>
-                </div>
-            </div>
-        </div>
-
-        <!-- 其余内容保持不变 -->
-
-    </div>
-
-    <!-- 在页面底部加载Giscus脚本 -->
-    <script>
-        const giscusAttributes = {
-            "src": "https://giscus.app/client.js",
-            "data-repo": "okjbyb/okjbyb.github.io",
-            "data-repo-id": "R_kgDOOdNb9Q",
-            "data-category": "Announcements",  <!-- 尝试使用默认分类 -->
-            "data-category-id": "DIC_kwDOOdNb9c4CpVEM",
-            "data-mapping": "pathname",
-            "data-strict": "0",
-            "data-reactions-enabled": "1",
-            "data-emit-metadata": "0",
-            "data-input-position": "bottom",
-            "data-theme": "light",
-            "data-lang": "zh-CN",
-            "crossorigin": "anonymous",
-            "async": ""
-        };
-
-        const giscusScript = document.createElement("script");
-        Object.entries(giscusAttributes).forEach(([key, value]) => 
-            giscusScript.setAttribute(key, value)
-        );
-        
-        const container = document.getElementById("giscus-container");
-        container.appendChild(giscusScript);
+    <h1>评论测试</h1>
+    <script src="https://giscus.app/client.js"
+        data-repo="okjbyb/okjbyb.github.io"
+        data-repo-id="R_kgDOOdNb9Q"
+        data-category="Announcements"
+        data-category-id="DIC_kwDOOdNb9c4CpVEM"
+        data-mapping="specific"
+        data-term="测试页面"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="light"
+        data-lang="zh-CN"
+        crossorigin="anonymous"
+        async>
     </script>
 </body>
 </html>
