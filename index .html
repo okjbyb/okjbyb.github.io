@@ -1,25 +1,237 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <title>Giscus测试</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>王笑言的博客</title>
+    <style>
+        /* 全局样式 */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s ease;
+        }
+        
+        body {
+            font-family: 'Times New Roman', Georgia, serif;
+            line-height: 1.6;
+            color: #4a4a4a;
+            background-color: #f8f4e9;
+             }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            padding: 40px 0;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', 'Times New Roman', serif;
+            color: #4a2c10;
+            margin-bottom: 20px;
+        }
+        
+        /* 标题样式 */
+        .site-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin: 30px 0;
+            color: #4a2c10;
+            font-weight: bold;
+            letter-spacing: 2px;
+            border-bottom: 2px solid #b39978;
+            padding-bottom: 15px;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.1);
+        }
+        
+        /* 内容卡片样式 */
+        .card {
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border: 1px solid #e0d6c4;
+        }
+        
+        /* 博客文章样式 */
+        .post {
+            margin-bottom: 40px;
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+            border: 1px solid #e0d6c4;
+        }
+        
+        .post-title {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #4a2c10;
+        }
+        
+        .post-meta {
+            display: block;
+            color: #998675;
+            font-style: italic;
+            margin-bottom: 20px;
+            border-bottom: 1px dashed #e0d6c4;
+            padding-bottom: 10px;
+        }
+        
+        .post-content {
+            line-height: 1.8;
+        }
+        
+        .read-more {
+            display: inline-block;
+            margin-top: 15px;
+            color: #8c715a;
+            text-decoration: none;
+            font-style: italic;
+        }
+        
+        .read-more:hover {
+            color: #b39978;
+            text-decoration: underline;
+        }
+        
+        /* 广告位样式 */
+        .ad-section {
+            margin: 40px 0;
+            text-align: center;
+        }
+        
+        .ad-banner {
+            padding: 20px;
+            background-color: #f1ebe0;
+            border: 1px dashed #b39978;
+            border-radius: 5px;
+        }
+        
+        .ad-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: #4a2c10;
+        }
+        
+        button {
+            background-color: #b39978;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            cursor: pointer;
+            font-size: 1rem;
+            border-radius: 4px;
+            font-family: inherit;
+            margin-top: 15px;
+        }
+        
+        button:hover {
+            background-color: #8c715a;
+        }
+        
+       
+        
+        /* 页脚样式 */
+        .footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            margin-top: 40px;
+            color: #998675;
+            border-top: 1px solid #e0d6c4;
+            font-style: italic;
+        }
+        
+      
+    </style>
 </head>
 <body>
-    <h1>评论测试</h1>
-    <script src="https://giscus.app/client.js"
+    <div class="container">
+        <header>
+            <h1 class="site-title">今日方知我是我的博客</h1>
+        </header>
+
+        <!-- 首页内容 -->
+        <section id="home-section" class="section">
+		      <div class="post">
+                <h2 class="post-title">傻逼南基一又输球了</h2>
+                <span class="post-meta">发布于2025.4.2 | </span>
+                <div class="post-content">
+                    <p>别嚯嚯河南队了，麻蛋这两年年年开局没舒坦过</p>
+                    <p>男鸡一赶紧下课<p>
+				    <p>而且大伙怎么全谈恋爱去了，怎么没有学妹来主动找我呢？<p>
+					<script src="https://giscus.app/client.js"
         data-repo="okjbyb/okjbyb.github.io"
         data-repo-id="R_kgDOOdNb9Q"
-        data-category="Announcements"
+        data-category="General"
         data-category-id="DIC_kwDOOdNb9c4CpVEM"
-        data-mapping="specific"
-        data-term="测试页面"
+        data-mapping="pathname"
         data-strict="0"
         data-reactions-enabled="1"
         data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="light"
+        data-input-position="top"
+        data-theme="preferred_color_scheme"
         data-lang="zh-CN"
         crossorigin="anonymous"
         async>
+</script>
+				</div>
+            </div>
+		    <div class="post">
+                <h2 class="post-title">又去西湖了</h2>
+                <span class="post-meta">发布于2025.3.22 | </span>
+                <div class="post-content">
+                    <p>跟宋启华去的西湖，叫了半天他终于来了，苏永康陪女朋友了没去，每次去西湖都感觉心旷神怡，3月的春西湖就是漂亮，美中不足的就是在玩的时候还开了个钉钉会议T_T。</p>
+                    <p>西湖真是缓解压力焦虑的好地方，这已经是去了数不过来了，下次还去捏<p>
+					<p>附上西湖照片和宋启华送我的东西<p>
+					   </div>
+            </div>
+            <div class="post">
+                <h2 class="post-title">要花钱的地方好多啊</h2>
+                <span class="post-meta">发布于2025.3.19 | </span>
+                <div class="post-content">
+                    <p>云服务器要钱，ai的api接口要钱，wangxiaoyan这个域名要4000块，美金！幸亏我没买，嘻嘻。</p>
+                    
+                </div>
+            </div>
+            
+            <div class="post">
+                <h2 class="post-title">有没有人可以在我的博客评论啊</h2>
+                <span class="post-meta">发布于2025.3.19 | </span>
+                <div class="post-content">
+                    <p>来试试评论功能啊</p>
+                    <p>已经把评论功能删了捏，做的是静态托管捏</p>
+                </div>
+            </div>
+            
+            <!-- 广告位部分 -->
+            <div class="ad-section">
+                <div class="ad-banner">
+                    <h3 class="ad-title">广告位招租</h3>
+                    <p>如果你钱多的没事干，可以在这投广告</p>
+                </div>
+            </div>
+
+           
+        </section>
+
+        <!-- 页脚 -->
+        <footer class="footer">
+            <p></p>
+            <p>钱塘江上潮信来，今日方知我是我</p>
+        </footer>
+    </div>
+
+    <script>
+        
+            });
+        });
     </script>
 </body>
 </html>
